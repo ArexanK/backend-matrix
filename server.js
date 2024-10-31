@@ -9,7 +9,6 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 
 app.get("/users", (req, res) => {
-  // Pass 'peopleData' to the EJS template under the variable name 'people'
   res.render("index", { user: userData });
 });
 

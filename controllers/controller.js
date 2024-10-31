@@ -10,7 +10,7 @@ const createNewUser = (req, res) => {
   const { name, createdAt, message } = req.body;
 
   if (!name || !createdAt || !message) {
-    //condition
+   
     return res.status(400).json({ error: "required name and post" });
   } else {
     const id = uuidv4();

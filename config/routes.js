@@ -3,7 +3,7 @@ const express = require("express");
 const route = express.Router();
 const controller = require("../controllers/controller");
 
-// route.get("/", controller.homePage);
+
 
 route.get("/", controller.getHomePage);
 route.post("/data", controller.createNewUser);
