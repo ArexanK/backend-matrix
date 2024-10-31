@@ -1,0 +1,2 @@
+This is a new line added using fs.writeFile!
+This line is appended using fs.appendFile!
