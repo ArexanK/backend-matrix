@@ -1,22 +1,24 @@
 const express = require("express");
 const app = express();
 const route = require("./config/routes");
-
-const PORT = 2000;
 const userData = require("./model/data");
 
-app.set("view engine", "ejs");
-app.set("views", "./views");
+const PORT = 2000;
 
+//ejs
+app.set("view engine", "ejs");
+
+//middleware
+app.use(express.static("public"));
+app.use(express.json());
+
+//routes
+app.use(route);
 app.get("/users", (req, res) => {
   res.render("index", { user: userData });
 });
 
-app.use(express.static("public"));
-
-app.use(express.json()); //middleware
-app.use(route);
-
+//server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

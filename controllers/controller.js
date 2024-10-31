@@ -6,6 +6,7 @@ const getHomePage = (req, res) => {
   res.status(200).send(data);
 };
 
+
 const createNewUser = (req, res) => {
   const { name, createdAt, message } = req.body;
 
