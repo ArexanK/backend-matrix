@@ -2,6 +2,7 @@ const data = require("../model/data.js");
 const { v4: uuidv4 } = require("uuid");
 uuidv4();
 
+
 const getHomePage = (req, res) => {
   res.status(200).send(data);
 };
@@ -40,3 +41,5 @@ module.exports = {
   createNewUser,
   getUserId,
 };
+
+//export default {getHomePage, createNewUser, getUserId}
