@@ -14,6 +14,7 @@ app.set("view engine", "ejs");
 //middleware (always define middleware above the routes)
 app.use(express.static("public"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); //to access the req.body , use this middleware to parse the body
 
 //routes
 app.use(route);
